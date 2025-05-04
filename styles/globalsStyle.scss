@@ -1,5 +1,17 @@
 @use './resetStyle' as *;
 
+body {
+  background-color: #fff;
+  font-family: var(--font-roboto);
+}
+
+.width-container {
+  width: -webkit-fill-available;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
 // hidden next portal
 nextjs-portal {
   display: none;
