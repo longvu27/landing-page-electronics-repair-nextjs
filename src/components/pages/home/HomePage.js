@@ -5,8 +5,47 @@ import Link from 'next/link';
 import suaDieuHoa from '@/assets/images/home/sua_dieu_hoa.png';
 import suaMayGiat from '@/assets/images/home/sua_may_giat.png';
 import suaMayLocNuoc from '@/assets/images/home/sua_may_loc_nuoc.png';
+import img_card_ve_sinh_may_giat from '@/assets/images/dienNuoc/ve_sinh_may_giat.jpeg';
+import img_card_sua_may_loc_nuoc from '@/assets/images/dienNuoc/sua_may_loc_nuoc.jpg';
+import img_card_sua_binh_nong_lanh from '@/assets/images/dienNuoc/sua_binh_nong_lanh.jpg';
+import img_card_lap_dat_dieu_hoa from '@/assets/images/dienLanh/lap_dat_dieu_hoa.jpg';
+import img_card_sua_chua_tu_lanh from '@/assets/images/dienLanh/sua_chua_tu_lanh.jpg';
+import img_card_ve_sinh_dieu_hoa from '@/assets/images/dienLanh/ve_sinh_dieu_hoa.jpg';
 
 export default function HomePage() {
+
+  const dataCardBlog = [
+    {
+      title: 'Vệ sinh máy giặt',
+      img: img_card_ve_sinh_may_giat,
+      link: '/dien-nuoc/ve-sinh-may-giat',
+    },
+    {
+      title: 'Sửa máy lọc nước',
+      img: img_card_sua_may_loc_nuoc,
+      link: '/dien-nuoc/sua-may-loc-nuoc',
+    },
+    {
+      title: 'Sửa bình nóng lạnh',
+      img: img_card_sua_binh_nong_lanh,
+      link: '/dien-nuoc/sua-binh-nong-lanh',
+    },
+    {
+      title: 'Lắp đặt điều hoà',
+      img: img_card_lap_dat_dieu_hoa,
+      link: '/dien-lanh/lap-dat-dieu-hoa',
+    },
+    {
+      title: 'Sửa chữa tủ lạnh',
+      img: img_card_sua_chua_tu_lanh,
+      link: '/dien-lanh/sua-chua-tu-lanh',
+    },
+    {
+      title: 'Vệ sinh điều hoà',
+      img: img_card_ve_sinh_dieu_hoa,
+      link: '/dien-lanh/ve-sinh-dieu-hoa',
+    },
+  ]
 
   return (
     <div className={s.wrapper}>
@@ -84,9 +123,22 @@ export default function HomePage() {
           </li>
         </ul>
 
+        <div className={s.titleH1} style={{margin: '20px auto'}}>Dịch vụ nổi bật của chúng tôi</div>
+        <div className={s.listCard}>
+          {dataCardBlog.map((item, index) => (
+            <div className={s.cardItem} key={index}>
+              <div className={s.image}>
+                <Image src={item.img} alt='card-item' />
+              </div>
+              <div className={s.title}>{item.title}</div>
+              <Link href={item.link} className={s.btn}>Chi tiết</Link>
+            </div>
+          ))}
+        </div>
+
         <p>Nếu bạn đang gặp sự cố với các thiết bị điện nước điện lạnh tại nhà hoặc văn phòng, đừng ngần ngại liên hệ ngay với chúng tôi. Gọi ngay để được tư vấn và nhận dịch vụ sửa chữa nhanh chóng, uy tín.</p>
 
-        <p>Tại sao lựa chọn dịch vụ sửa chữa điện lạnh tại Doãn Anh?</p>
+        <p>Tại sao lựa chọn dịch vụ sửa chữa điện lạnh tại <span>Doãn Anh</span>?</p>
         <p>Giải pháp tối ưu cho mọi sự cố điện lạnh: Với kiến thức chuyên sâu và kinh nghiệm lâu năm, chúng tôi tự tin cung cấp các giải pháp sửa chữa nhanh chóng và hiệu quả nhất cho mọi loại thiết bị điện lạnh.</p>
 
         <p>Dịch vụ sửa chữa tại nhà tiện lợi: Bạn không cần phải lo lắng về việc mang thiết bị đi sửa chữa. Chúng tôi sẽ đến tận nơi để kiểm tra và sửa chữa nhanh chóng.</p>
@@ -118,6 +170,8 @@ export default function HomePage() {
         <h2 >Liên hệ ngay</h2>
         <p>Hotline: <span >0964 701 333</span></p>
       </div>
+
+
     </div>
   );
 }

@@ -64,6 +64,24 @@
   gap: 15px;
 }
 
+.imgRepair {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: calc(100% - 200px);
+    height: fit-content;
+  }
+}
+
+.stepContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 @media (max-width: 768px) {
   .wrapper {
     ul {
@@ -74,6 +92,7 @@
       }
     }
   }
+
 
   .titleH1 {
     font-size: 26px;
@@ -94,5 +113,11 @@
 
   .content {
     gap: 10px;
+  }
+
+  .imgRepair {
+    img {
+      width: 100%;
+    }
   }
 }
