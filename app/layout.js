@@ -3,14 +3,14 @@ import "../styles/globalsStyle.scss";
 import { Roboto } from "next/font/google";
 import Layout from '@/src/components/layout/Layout';
 
- const roboto = Roboto({
+const roboto = Roboto({
   subsets: ['latin'],
   variable: '--font-roboto',
 });
 
 
 export const metadata = {
-  metadataBase: new URL(`https://suachuadienlanhthanhhoa.vercel.app/`),
+  metadataBase: new URL(`https://diennuocdienlanhthanhhoa.com/`),
   title: "Dịch Vụ Điện Nước, Điện Lạnh Thanh Hóa",
   description: "Chuyên sửa chữa, bảo trì điện nước, điện lạnh tại Thanh Hóa. Dịch vụ uy tín, chuyên nghiệp, hỗ trợ nhanh 24/7. Cam kết chất lượng, giá tốt nhất!",
   keywords: "sửa chữa điện nước, sửa chữa điện lạnh, sửa tivi, sửa máy lạnh, sửa tủ lạnh, máy lọc nước",
@@ -29,10 +29,10 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://suachuadienlanhthanhhoa.vercel.app/",
+    canonical: "https://diennuocdienlanhthanhhoa.com/",
     languages: {
-      vi: "https://suachuadienlanhthanhhoa.vercel.app/",
-      "x-default": "https://suachuadienlanhthanhhoa.vercel.app/",
+      vi: "https://diennuocdienlanhthanhhoa.com/",
+      "x-default": "https://diennuocdienlanhthanhhoa.com/",
     },
   },
 };
