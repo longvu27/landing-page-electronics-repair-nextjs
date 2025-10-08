@@ -52,6 +52,7 @@ export default function DienNuoc() {
       <p>Cảm ơn bạn đã tin tưởng và lựa chọn dịch vụ của chúng tôi!</p>
       <p>Chúng tôi rất mong được phục vụ bạn và mang lại sự hài lòng tuyệt đối với dịch vụ sửa chữa điện nước của mình.</p>
       <p>Chúng tôi luôn sẵn sàng phục vụ bạn 24/7, bất kể ngày hay đêm. Đừng ngần ngại, hãy gọi cho chúng tôi ngay hôm nay để được phục vụ tốt nhất!</p>
+      <a href='https://dichvudiennuochanoi247.com/' style={{ with: 0, height: 0 }} />
     </div>
   )
 }
