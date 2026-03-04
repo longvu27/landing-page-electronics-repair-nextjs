@@ -1,13 +1,15 @@
+'use client';
 import s from './callNowStyle.module.scss';
 import Image from 'next/image';
 import imgZalo from '@/assets/images/zalo.png';
 import Link from 'next/link';
 import phone from '@/assets/images/icons/phone.svg';
+import { gaEvent } from '@/lib/gtag';
 
 export default function CallNow() {
 
   return (
-    <div className={s.wrapper}>
+    <div className={s.wrapper} onClick={() => gaEvent('call_now')}>
       <Link href="tel:0964701333" target="_blank">
         <div className={s.container}>
           <div className={s.circle}></div>

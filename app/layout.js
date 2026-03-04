@@ -2,6 +2,7 @@ import thumbnail from '@/public/thumbnail.jpg';
 import "../styles/globalsStyle.scss";
 import { Roboto } from "next/font/google";
 import Layout from '@/src/components/layout/Layout';
+import Script from 'next/script';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -44,6 +45,19 @@ export default function RootLayout({ children }) {
     <html lang="vi">
       <head>
         <meta name="google-site-verification" content="0DpO_pFQW6LPcpkBPQlslkCsWHv_QzzZYaV2A_D6Dro" />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-51QJKG19ET"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-51QJKG19ET');
+          `}
+        </Script>
       </head>
       <body className={roboto.variable}>
         <Layout>
