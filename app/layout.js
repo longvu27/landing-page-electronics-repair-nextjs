@@ -3,6 +3,7 @@ import "../styles/globalsStyle.scss";
 import { Roboto } from "next/font/google";
 import Layout from '@/src/components/layout/Layout';
 import Script from 'next/script';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -81,6 +82,7 @@ export default function RootLayout({ children }) {
             })
           }}
         />
+        <SpeedInsights />
       </body>
     </html>
   );
