@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import s from './dienNuocStyle.module.scss';
 import imgRepair from '@/assets/images/dien_lanh.jpg';
+import sua_chua_dien from '@/assets/images/dienNuoc/sua_chua_dien.jpg';
+import thi_cong_duong_ong_nuoc from '@/assets/images/dienNuoc/thi_cong_duong_ong_nuoc.jpg';
+import day_dien_am_tuong from '@/assets/images/dienNuoc/day_dien_am_tuong.webp';
+import thi_cong_dien_nuoc_6 from '@/assets/images/dienNuoc/thi_cong_dien_nuoc_6.jpg';
+import sua_dien_hn from '@/assets/images/dienNuoc/sua_dien_hn.png';
 
 export default function DienNuoc() {
 
@@ -23,6 +28,11 @@ export default function DienNuoc() {
         <li>Lắp đặt máy bơm nước, hệ thống cấp nước sinh hoạt</li>
       </ul>
 
+      <div className={s.singleImg}>
+        <Image width={400} height={500} src={sua_chua_dien} alt='sua dien nuoc thanh hoa' />
+        <p>Hình ảnh: Sửa chữa điện nước tại thành phố Thanh Hóa</p>
+      </div>
+
       <h2 className={s.titleH3}>Lý Do Khách Hàng Tin Chọn Chúng Tôi:</h2>
       <ul>
         <li>Phục vụ tận nơi nhanh chóng tại tất cả các khu vực Thanh Hóa</li>
@@ -40,8 +50,28 @@ export default function DienNuoc() {
         <li>Bàn giao và bảo hành dịch vụ</li>
       </ul>
 
+      <div>
+        <div className={s.listImg}>
+          <div className={s.img}>
+            <Image src={thi_cong_dien_nuoc_6} alt='thi công điện nước' />
+          </div>
+          <div className={s.img}>
+            <Image src={thi_cong_duong_ong_nuoc} alt='thi công đường ống nước' />
+          </div>
+          <div className={s.img}>
+            <Image src={day_dien_am_tuong} alt='thi công điện âm tường' />
+          </div>
+        </div>
+        <p style={{ fontSize: '14px', fontStyle: 'italic', textAlign: 'center' }}>Hình ảnh: Sửa chữa, thi công điện nước tại phường Ba Đình thành phố Thanh Hoá</p>
+      </div>
+
       <h2 className={s.titleH3}>Cách Xử Lý Ống Nước Bị Vỡ Tại Nhà - Nhanh Chóng, Hiệu Quả</h2>
       <p>Ống nước bị vỡ gây ra tình trạng rò rỉ nước, làm lãng phí tài nguyên và ảnh hưởng đến sinh hoạt hàng ngày. Khi gặp sự cố này, bạn cần xử lý nhanh để hạn chế thiệt hại. Dưới đây là những bước xử lý đơn giản từ đội ngũ <strong>sửa chữa điện nước tại Thanh Hóa</strong> chia sẻ.</p> <h2>1. Khóa Van Nước Tổng Ngay Lập Tức</h2> <p>Khi phát hiện ống nước bị vỡ, việc đầu tiên bạn cần làm là khóa van nước tổng để ngăn nước tiếp tục chảy ra, hạn chế ngập úng và thiệt hại cho tài sản.</p> <h2>2. Xác Định Vị Trí Ống Bị Vỡ</h2> <p>Xác định chính xác vị trí ống nước bị nứt hoặc vỡ giúp bạn khoanh vùng sửa chữa dễ dàng hơn. Nếu ống nước bị vỡ ngầm trong tường, bạn cần đến sự hỗ trợ của thợ chuyên nghiệp.</p> <h2>3. Sử Dụng Băng Keo Chuyên Dụng Hoặc Đai Siết</h2> <p>Trong trường hợp khẩn cấp, bạn có thể dùng băng keo chịu nước hoặc đai siết ống nước để tạm thời khắc phục vết nứt. Tuy nhiên, đây chỉ là giải pháp tạm thời.</p> <h2>4. Gọi Thợ Sửa Chữa Điện Nước Chuyên Nghiệp</h2> <p>Để xử lý triệt để, bạn nên liên hệ ngay dịch vụ <strong>sửa chữa điện nước tại Thanh Hóa</strong>. Các thợ chuyên nghiệp sẽ thay thế đoạn ống hỏng, đảm bảo hệ thống nước nhà bạn hoạt động ổn định lâu dài.</p> <h2>Liên Hệ Dịch Vụ Sửa Ống Nước Thanh Hóa</h2> <p>Chúng tôi nhận sửa chữa rò rỉ nước, vỡ ống nước, thay thế đường ống mới chuyên nghiệp, giá hợp lý. Phục vụ tận nơi nhanh chóng tại Thanh Hóa.</p>
+
+      <div className={s.singleImg}>
+        <Image width={400} height={500} src={sua_dien_hn} alt='sửa chữa điện nước tại Thanh Hóa' />
+        <p>Hình ảnh: Sửa chữa điện nước tại phường Đông Sơn thành phố Thanh Hóa</p>
+      </div>
 
       <h2 className={s.titleH3}>Liên Hệ Sửa Điện Nước Thanh Hóa Ngay:</h2>
       <p>Hotline: <span><a href="tel:0964701333">0964 701 333</a></span></p>
