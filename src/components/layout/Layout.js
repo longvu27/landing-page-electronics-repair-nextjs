@@ -4,6 +4,7 @@ import Footer from './footer/Footer';
 import TopFooter from './topFooter/TopFooter';
 import ConnectZalo from '../connectZalo/ConnectZalo';
 import CallNow from '../callNow/CallNow';
+import FeedBack from './feedBack/FeedBack';
 
 export default function Layout({ children }) {
   return (
@@ -14,6 +15,7 @@ export default function Layout({ children }) {
       <div className={`width-container ${s.main}`}>
         {children}
       </div>
+      <FeedBack/>
       <TopFooter />
       <Footer />
     </div>
