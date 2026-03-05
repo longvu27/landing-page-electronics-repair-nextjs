@@ -1,45 +1,95 @@
 import Image from 'next/image';
 import s from './dienNuocStyle.module.scss';
-import imgRepair from '@/assets/images/dien_lanh.jpg';
+import imgRepair from '@/assets/images/dienNuoc/sua_chua_dien_nuoc_a_z.jpg';
 import sua_chua_dien from '@/assets/images/dienNuoc/sua_chua_dien.jpg';
 import thi_cong_duong_ong_nuoc from '@/assets/images/dienNuoc/thi_cong_duong_ong_nuoc.jpg';
 import day_dien_am_tuong from '@/assets/images/dienNuoc/day_dien_am_tuong.webp';
 import thi_cong_dien_nuoc_6 from '@/assets/images/dienNuoc/thi_cong_dien_nuoc_6.jpg';
 import sua_dien_hn from '@/assets/images/dienNuoc/sua_dien_hn.png';
+import FeaturedServices from '../../featuredServices/FeaturedServices';
+import ic_tick from '@/assets/images/icons/ic_tick.svg';
+import ic_x from '@/assets/images/icons/ic_x.svg';
+import ic_point from '@/assets/images/icons/ic_point.svg';
 
 export default function DienNuoc() {
+  const service = [
+    ' Sửa chữa điện',
+    ' Sửa chữa nước, ống nước',
+    ' Sửa máy bơm tại nhà',
+    ' Sửa bình tắm, nóng lạnh',
+    ' Sửa bóng đèn, quạt điện',
+    ' Siêu âm rò nước trong tường',
+  ]
+
+  const customer = [
+    ' 15 Phút có mặt xử lý',
+    ' Bảo hành lâu dài',
+    ' Trực tư vấn 24/24',
+    ' Đồ đạc chính hãng, hóa đơn',
+    ' Không chặt chém',
+    ' Báo giá trực tiếp tận nơi',
+    ' Khách không làm nhân viên đi về, không xin tiền'
+  ]
 
   return (
     <div className={s.wrapper}>
-      <div className={s.imgBanner}>
-        <Image src={imgRepair} alt="Sửa chữa điện nước điện lạnh tại Thanh Hoá" />
-      </div>
+      <section className={s.newService} style={{ marginTop: '20px' }}>
+        <div className={s.container}>
+          <div className={s.title}>Dịch vụ của chúng tôi:</div>
+          {service.map((item, index) => (
+            <h3 key={index} className={s.item}>
+              <Image width={16} height={16} src={ic_tick} alt='icon' />
+              {item}
+            </h3>
+          ))}
+        </div>
+        <div className={s.container}>
+          <div className={s.title}>KHÁCH HÀNG CHỌN CHÚNG TÔI VÌ:</div>
+          {customer.map((item, index) => (
+            <div key={index} className={s.item}>
+              <Image width={16} height={16} src={index + 1 === customer.length ? ic_x : ic_point} alt='icon' />
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <h1 className={s.titleH1}>Dịch Vụ Sửa Chữa Điện Nước Tại Thanh Hóa - Nhanh Chóng, Giá Rẻ</h1>
+      <h1 className={s.titleH1}>
+        Dịch Vụ Sửa Chữa Điện Nước Tại Thanh Hóa Uy Tín - Thợ Điện Nước Tại Nhà Nhanh Chóng
+      </h1>
 
-      <p>Chuyên nhận sửa chữa điện nước dân dụng tại Thanh Hóa: thay dây điện, sửa ống nước rò rỉ, lắp đặt thiết bị điện nước mới, xử lý sự cố điện nước an toàn, nhanh chóng.</p>
-
-      <h2 className={s.titleH3}>Các Dịch Vụ Điện Nước Chúng Tôi Cung Cấp:</h2>
-      <ul>
-        <li>Sửa chữa hệ thống điện dân dụng, thay dây điện, ổ cắm, CB</li>
-        <li>Lắp đặt bóng đèn, quạt trần, công tắc, cầu dao</li>
-        <li>Sửa chữa rò rỉ nước, vỡ ống nước</li>
-        <li>Thông tắc đường ống nước, lavabo, bồn cầu</li>
-        <li>Lắp đặt máy bơm nước, hệ thống cấp nước sinh hoạt</li>
-      </ul>
+      <h2 className={s.tagP}>
+        Cung cấp dịch vụ sửa chữa điện nước tại Thanh Hóa chuyên nghiệp: sửa điện chập cháy, thay dây điện, sửa ống nước rò rỉ, lắp đặt thiết bị điện nước, xử lý sự cố điện nước tại nhà nhanh chóng – an toàn – giá hợp lý.
+      </h2>
 
       <div className={s.singleImg}>
-        <Image width={400} height={500} src={sua_chua_dien} alt='sua dien nuoc thanh hoa' />
+        <Image width={400} height={500} src={sua_chua_dien} alt='dịch vụ sửa chữa điện nước tại Thanh Hoá' />
         <p>Hình ảnh: Sửa chữa điện nước tại thành phố Thanh Hóa</p>
       </div>
 
-      <h2 className={s.titleH3}>Lý Do Khách Hàng Tin Chọn Chúng Tôi:</h2>
+      <div className={s.content}>
+        <h1 className={s.titleH2}>Thợ sửa điện nước tại nhà Hà Nội hỗ trợ nhanh 24/7</h1>
+        <p>Nếu bạn đang gặp sự cố với các thiết bị điện nước tại nhà hoặc văn phòng, đừng ngần ngại liên hệ ngay với chúng tôi. Gọi ngay để được tư vấn và nhận dịch vụ sửa chữa nhanh chóng, uy tín.</p>
+
+        <div className={s.singleImg}>
+          <Image width={400} height={500} src={imgRepair} alt="Sửa chữa điện nước tại Thanh Hoá" />
+          <p>Hình ảnh: Sửa chữa, thi công điện nước tại Phường Đông Sơn, TP Thanh Hóa</p>
+        </div>
+        <p>Tại sao lựa chọn dịch vụ sửa chữa điện nước tại <span>Doãn Anh</span>?</p>
+        <p>Giải pháp tối ưu cho mọi sự cố điện nước: Với kiến thức chuyên sâu và kinh nghiệm lâu năm, chúng tôi tự tin cung cấp các giải pháp sửa chữa nhanh chóng và hiệu quả nhất cho mọi loại thiết bị điện nước.</p>
+
+        <p>Dịch vụ sửa chữa tại nhà tiện lợi: Bạn không cần phải lo lắng về việc mang thiết bị đi sửa chữa. Chúng tôi sẽ đến tận nơi để kiểm tra và sửa chữa nhanh chóng.</p>
+
+        <p>Giá cả phải chăng, bảo hành dài hạn: Với mức giá hợp lý, chúng tôi cam kết không phát sinh thêm chi phí, đồng thời bảo hành dài hạn cho mọi dịch vụ.</p>
+      </div>
+
+      {/* <h2 className={s.titleH3}>Lý Do Khách Hàng Tin Chọn Chúng Tôi:</h2>
       <ul>
         <li>Phục vụ tận nơi nhanh chóng tại tất cả các khu vực Thanh Hóa</li>
         <li>Thợ tay nghề cao, kinh nghiệm lâu năm</li>
         <li>Giá thành hợp lý, báo giá trước khi sửa</li>
         <li>Bảo hành dịch vụ rõ ràng sau sửa chữa</li>
-      </ul>
+      </ul> */}
 
       <h2 className={s.titleH3}>Quy Trình Làm Việc:</h2>
       <ul>
@@ -83,6 +133,7 @@ export default function DienNuoc() {
       <p>Chúng tôi rất mong được phục vụ bạn và mang lại sự hài lòng tuyệt đối với dịch vụ sửa chữa điện nước của mình.</p>
       <p>Chúng tôi luôn sẵn sàng phục vụ bạn 24/7, bất kể ngày hay đêm. Đừng ngần ngại, hãy gọi cho chúng tôi ngay hôm nay để được phục vụ tốt nhất!</p>
       <a href='https://dichvudiennuochanoi247.com/' style={{ with: 0, height: 0 }} />
+      {/* <FeaturedServices /> */}
     </div>
   )
 }
