@@ -5,12 +5,6 @@ import Link from 'next/link';
 import suaDieuHoa from '@/assets/images/home/sua_dieu_hoa.png';
 import suaMayGiat from '@/assets/images/home/sua_may_giat.png';
 import suaMayLocNuoc from '@/assets/images/home/sua_may_loc_nuoc.png';
-import img_card_ve_sinh_may_giat from '@/assets/images/dienNuoc/ve_sinh_may_giat.jpeg';
-import img_card_sua_may_loc_nuoc from '@/assets/images/dienNuoc/sua_may_loc_nuoc.jpg';
-import img_card_sua_binh_nong_lanh from '@/assets/images/dienNuoc/sua_binh_nong_lanh.jpg';
-import img_card_lap_dat_dieu_hoa from '@/assets/images/dienLanh/lap_dat_dieu_hoa.jpg';
-import img_card_sua_chua_tu_lanh from '@/assets/images/dienLanh/sua_chua_tu_lanh.jpg';
-import img_card_ve_sinh_dieu_hoa from '@/assets/images/dienLanh/ve_sinh_dieu_hoa.jpg';
 
 import img_binh_nong_lanh from '@/assets/images/home/binh_nong_lanh.jpg';
 import img_dieu_hoa from '@/assets/images/home/dieu_hoa.webp';
@@ -18,41 +12,9 @@ import img_may_giat from '@/assets/images/home/may_giat.webp';
 import img_may_loc_nuoc from '@/assets/images/home/may_loc_nuoc.webp';
 import img_may_phat_dien from '@/assets/images/home/may_phat_dien.jpg';
 import img_tu_lanh from '@/assets/images/home/tu_lanh.webp';
+import sua_chua_dien from '@/assets/images/dienNuoc/sua_chua_dien_nuoc_a_z.jpg';
 
 export default function HomePage() {
-
-  const dataCardBlog = [
-    {
-      title: 'Vệ sinh máy giặt',
-      img: img_card_ve_sinh_may_giat,
-      link: '/dien-nuoc/ve-sinh-may-giat',
-    },
-    {
-      title: 'Sửa máy lọc nước',
-      img: img_card_sua_may_loc_nuoc,
-      link: '/dien-nuoc/sua-may-loc-nuoc',
-    },
-    {
-      title: 'Sửa bình nóng lạnh',
-      img: img_card_sua_binh_nong_lanh,
-      link: '/dien-nuoc/sua-binh-nong-lanh',
-    },
-    {
-      title: 'Lắp đặt điều hoà',
-      img: img_card_lap_dat_dieu_hoa,
-      link: '/dien-lanh/lap-dat-dieu-hoa',
-    },
-    {
-      title: 'Sửa chữa tủ lạnh',
-      img: img_card_sua_chua_tu_lanh,
-      link: '/dien-lanh/sua-chua-tu-lanh',
-    },
-    {
-      title: 'Vệ sinh điều hoà',
-      img: img_card_ve_sinh_dieu_hoa,
-      link: '/dien-lanh/ve-sinh-dieu-hoa',
-    },
-  ]
 
   const dataProduct = [
     {
@@ -120,6 +82,7 @@ export default function HomePage() {
             <Image src={suaMayLocNuoc} alt='sửa chữa máy lọc nước' />
           </div>
         </div>
+        <p style={{ fontStyle: 'italic', textAlign: 'center' }}>Hình ảnh: Sửa chữa điện nước tại thành phố Thanh Hóa</p>
 
         <p className={s.titleH3}>Dịch vụ sửa chữa điện lạnh của chúng tôi bao gồm:</p>
 
@@ -156,18 +119,9 @@ export default function HomePage() {
             <p><span>Chất lượng dịch vụ vượt trội:</span> Chúng tôi luôn nỗ lực để mang lại dịch vụ sửa chữa tốt nhất, đáp ứng mọi nhu cầu của khách hàng.</p>
           </li>
         </ul>
-
-        <div className={s.titleH1} style={{ margin: '20px auto' }}>Dịch vụ nổi bật của chúng tôi</div>
-        <div className={s.listCard}>
-          {dataCardBlog.map((item, index) => (
-            <div className={s.cardItem} key={index}>
-              <div className={s.image}>
-                <Image src={item.img} alt='card-item' />
-              </div>
-              <div className={s.title}>{item.title}</div>
-              <Link href={item.link} className={s.btn}>Chi tiết</Link>
-            </div>
-          ))}
+        <div className={s.singleImg}>
+          <Image width={400} height={500} src={sua_chua_dien} alt='Sửa chữa điện nước tại thành phố Thanh Hóa' />
+          <p>Hình ảnh: Sửa chữa điện nước tại thành phố Thanh Hóa</p>
         </div>
 
         <p>Nếu bạn đang gặp sự cố với các thiết bị điện nước điện lạnh tại nhà hoặc văn phòng, đừng ngần ngại liên hệ ngay với chúng tôi. Gọi ngay để được tư vấn và nhận dịch vụ sửa chữa nhanh chóng, uy tín.</p>
@@ -179,6 +133,23 @@ export default function HomePage() {
 
         <p>Giá cả phải chăng, bảo hành dài hạn: Với mức giá hợp lý, chúng tôi cam kết không phát sinh thêm chi phí, đồng thời bảo hành dài hạn cho mọi dịch vụ.</p>
 
+        <div>
+          <p>
+            Chúng tôi cung cấp dịch vụ{' '}
+            <Link href="/dien-nuoc">
+              Sửa chữa điện nước Thanh Hóa
+            </Link>
+            {' '}với giá tốt nhất.
+          </p>
+
+          <p>
+            Nếu bạn đang cần{' '}
+            <Link href="/dien-lanh">
+              Sửa chữa điện lạnh tại Thanh Hóa
+            </Link>
+            , chúng tôi luôn sẵn sàng phục vụ nhanh chóng.
+          </p>
+        </div>
         <p>Liên hệ ngay với chúng tôi qua số điện thoại <span><a href="tel:0964701333">0964 701 333</a></span> để được hỗ trợ tốt nhất.</p>
       </div>
 
@@ -195,25 +166,6 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-
-      <div>
-        <p>
-          Chúng tôi cung cấp dịch vụ{' '}
-          <Link href="/dien-nuoc">
-            Sửa chữa điện nước Thanh Hóa
-          </Link>
-          {' '}với giá tốt nhất.
-        </p>
-
-        <p>
-          Nếu bạn đang cần{' '}
-          <Link href="/dien-lanh">
-            Sửa chữa điện lạnh tại Thanh Hóa
-          </Link>
-          , chúng tôi luôn sẵn sàng phục vụ nhanh chóng.
-        </p>
-      </div>
-      <p>Liên hệ ngay với chúng tôi qua số điện thoại <span><a href="tel:0964701333">0964 701 333</a></span> để được hỗ trợ tốt nhất.</p>
 
       <a href='https://dichvudiennuochanoi247.com/' style={{ with: 0, height: 0 }} />
     </div>
