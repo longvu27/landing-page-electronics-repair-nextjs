@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.9",
-                "reviewCount": "1.527"
+                "reviewCount": "1527"
               }
             })
           }}

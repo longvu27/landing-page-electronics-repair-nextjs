@@ -5,11 +5,11 @@ export default function Page() {
     <>
       <div itemScope itemType="https://schema.org/AggregateRating">
         ⭐⭐⭐⭐⭐ <span itemProp="ratingValue">4.9</span>/5
-        (<span itemProp="reviewCount">1.527</span> đánh giá)
+        (<span itemProp="reviewCount">1527</span> đánh giá)
       </div>
       <FeedBack />
       <div>
-        ⭐⭐⭐⭐⭐ 4.9/5 (1.527 đánh giá)
+        ⭐⭐⭐⭐⭐ 4.9/5 (1527 đánh giá)
       </div>
     </>
   )
