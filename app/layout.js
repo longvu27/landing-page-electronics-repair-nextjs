@@ -69,20 +69,23 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "HomeAndConstructionBusiness",
               "name": "Dịch Vụ Điện Nước, Điện Lạnh Thanh Hóa",
+              "url": "https://diennuocdienlanhthanhhoa.com",
+              "image": "https://diennuocdienlanhthanhhoa.com/thumbnail.jpg",
+              "telephone": "+84342886598",
+              "description": "Chuyên sửa chữa, bảo trì điện nước, điện lạnh tại Thanh Hóa. Dịch vụ uy tín, chuyên nghiệp, hỗ trợ nhanh 24/7.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Thanh Hóa",
                 "addressCountry": "VN"
               },
-              "telephone": "+84342886598",
               "openingHours": "Mo-Su 08:00-22:00",
-              "description": "Chuyên sửa chữa, bảo trì điện nước, điện lạnh tại Thanh Hóa. Dịch vụ uy tín, chuyên nghiệp, hỗ trợ nhanh 24/7. Cam kết chất lượng, giá tốt nhất!",
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.9",
-                "reviewCount": "1527"
+                "reviewCount": "1527",
+                "bestRating": "5"
               }
             })
           }}
